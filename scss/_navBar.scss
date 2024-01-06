@@ -1,0 +1,18 @@
+.mainNavbar {
+  @include d_flex(row, center);
+  @include media_up(sm) {
+    @include d_flex(column, flex-start);
+  };
+};
+
+.footerNavbar,
+footer nav ul,
+footer nav a {
+  @include d_flex(row, center);
+};
+
+footer nav a {
+  @include media_up(xl) {
+    justify-content: end;
+  };
+};

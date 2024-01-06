@@ -1,0 +1,90 @@
+//GENERAL
+body {
+    min-height: 100vh;
+    @include d_flex(column, space-between);
+};
+
+nav,
+footer {
+    background-color: rgb(0, 92, 147);
+};
+
+.carousel-item {
+    min-height: auto;
+    max-width: 100%;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+};
+
+.imgLogo {
+    max-width: 50%;
+    @include media_up(ssm) {
+        max-width: 65%
+    };
+    @include media_up(sm) {
+        max-width: 75%
+    };
+    @include media_up(md) {
+        max-width: 65%
+    };
+    @include media_up(lg) {
+        max-width: 60%
+    };
+    @include media_up(xl) {
+        max-width: 50%
+    };
+};
+
+.gridMain {
+    width: 99%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "zone1A"
+        "zone1B"
+        "zone1C";
+};
+
+.zone1A {
+    grid-area: zone1A;
+};
+
+.zone1B {
+    grid-area: zone1B;
+};
+
+.zone1C {
+    grid-area: zone1C;
+};
+
+@media screen and(min-width:576px) {
+    .gridMain {
+        grid-template-rows: auto auto;
+        grid-template-columns: 30% 70%;
+        grid-template-areas:
+            "zone1A zone1B"
+            "zone1A zone1C";
+    };
+};
+
+.reviewText {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+};
+
+.reviewText:hover {
+    display: block;
+};
+
+.page404 {
+    @include d_flex (column, space-evenly);
+    min-height: 100vh;
+    align-items: center;
+};

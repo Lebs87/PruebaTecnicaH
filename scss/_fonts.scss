@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Public+Sans:wght@300&display=swap');
+
+//vars fonts
+$font1: 'IBM Plex Sans', sans-serif;
+$font2: 'Public Sans', sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-family: $font1;
+};
+
+.pagelinks {
+    font-family: $font2;
+    &:hover {
+        color: map-get($map: $colors, $key: 'lightblue');
+    };
+};
+
+ul li a,
+footer .nav-link,
+header .nav-link {
+    @extend .pagelinks;
+    color: map-get($map: $colors, $key: 'white');
+};
+
+.nav-link {
+    @extend .pagelinks;
+    color: map-get($map: $colors, $key: 'blue');
+};
+
+a {
+    @extend .pagelinks;
+    text-decoration: none;
+    color: map-get($map: $colors, $key: 'black');
+};
