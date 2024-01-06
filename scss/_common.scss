@@ -38,6 +38,14 @@ footer {
     };
 };
 
+main section.zone1A {
+    background-color: map-get($map: $colors, $key: 'verylightblue');
+};
+
+main section.zone1A li {
+    background-color: map-get($map: $colors, $key: 'white');
+};
+
 .gridMain {
     width: 99%;
     display: grid;
@@ -61,7 +69,7 @@ footer {
     grid-area: zone1C;
 };
 
-@media screen and(min-width:576px) {
+@media screen and(min-width:1230px) {
     .gridMain {
         grid-template-rows: auto auto;
         grid-template-columns: 30% 70%;

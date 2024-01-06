@@ -7,24 +7,24 @@ h5,
 p {
   font-family: "IBM Plex Sans", sans-serif; }
 
-.pagelinks, ul li a,
+a {
+  text-decoration: none;
+  color: black; }
+
+.nav-link {
+  color: #005e94; }
+
+.pagelinks, a, .nav-link, ul li a,
 footer .nav-link,
-header .nav-link, .nav-link, a {
+header .nav-link {
   font-family: "Public Sans", sans-serif; }
-  .pagelinks:hover, .nav-link:hover, a:hover {
+  .pagelinks:hover, a:hover, .nav-link:hover {
     color: #1f6dff; }
 
 ul li a,
 footer .nav-link,
 header .nav-link {
   color: whitesmoke; }
-
-.nav-link {
-  color: #005e94; }
-
-a {
-  text-decoration: none;
-  color: black; }
 
 .mainNavbar {
   display: flex;
@@ -46,6 +46,26 @@ footer nav a {
 @media screen and (min-width: 1230px) {
   footer nav a {
     justify-content: end; } }
+
+.footerNavbar ul {
+  padding: 0; }
+
+.footerNavbar li {
+  position: relative;
+  margin-right: auto; }
+
+.footerNavbar li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: whitesmoke; }
+
+.footerNavbar li:last-child::after {
+  content: none; }
 
 body {
   min-height: 100vh;
@@ -84,6 +104,12 @@ footer {
     .imgLogo {
       max-width: 50%; } }
 
+main section.zone1A {
+  background-color: #bbcae7; }
+
+main section.zone1A li {
+  background-color: whitesmoke; }
+
 .gridMain {
   width: 99%;
   display: grid;
@@ -100,7 +126,7 @@ footer {
 .zone1C {
   grid-area: zone1C; }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 1230px) {
   .gridMain {
     grid-template-rows: auto auto;
     grid-template-columns: 30% 70%;

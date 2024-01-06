@@ -13,6 +13,17 @@ p {
     font-family: $font1;
 };
 
+a {
+    @extend .pagelinks;
+    text-decoration: none;
+    color: map-get($map: $colors, $key: 'black');
+};
+
+.nav-link {
+    @extend .pagelinks;
+    color: map-get($map: $colors, $key: 'blue');
+};
+
 .pagelinks {
     font-family: $font2;
     &:hover {
@@ -25,15 +36,4 @@ footer .nav-link,
 header .nav-link {
     @extend .pagelinks;
     color: map-get($map: $colors, $key: 'white');
-};
-
-.nav-link {
-    @extend .pagelinks;
-    color: map-get($map: $colors, $key: 'blue');
-};
-
-a {
-    @extend .pagelinks;
-    text-decoration: none;
-    color: map-get($map: $colors, $key: 'black');
 };

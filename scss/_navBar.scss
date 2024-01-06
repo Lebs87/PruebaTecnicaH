@@ -16,3 +16,27 @@ footer nav a {
     justify-content: end;
   };
 };
+
+.footerNavbar ul {
+  padding: 0;
+};
+
+.footerNavbar li {
+  position: relative;
+  margin-right: auto;
+};
+
+.footerNavbar li::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background-color: map-get($map: $colors, $key: 'white');
+};
+
+.footerNavbar li:last-child::after {
+  content: none; 
+};
