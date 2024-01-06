@@ -4,14 +4,20 @@
   "description": "Prueba Técnica",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "standard && node my-tests.js",
     "build-css": "node-sass --include-path scss scss/main.scss assets/css/style.css",
-		"watch-css": "nodemon -e scss -x \"npm     run build-css\""
+    "watch-css": "nodemon -e scss -x \"npm     run build-css\""
   },
   "author": "Luis Belisario",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^9.0.0",
     "nodemon": "^3.0.2"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
